@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function storedata()
+        {
+            var empid=document.getElementById("empid").value;
+            var empname=document.getElementById("empname").value;
+            var deptno=document.getElementById("deptno").value;
+            var sal=document.getElementById("sal").value;
+
+            sessionStorage.setItem("employee id",empid);
+            sessionStorage.setItem("employee name",empname);
+            sessionStorage.setItem("department no",deptno);
+            sessionStorage.setItem("employee salary",sal);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>product info</legend>
+    <table style="border-radius: 5px;background-color: coral;">
+        <tr>
+        <td>Employee id:</td>
+        <td><input type="number" id="empid" min="1" max="20" required></td>
+        </tr>
+        <tr>
+            <td>Employee name</td>
+            <td><input type="text" id="empname" minlength="1" maxlength="20" required></td>
+        </tr>
+        <tr>
+            <td>Department No</td>
+            <td><input type="number" id="deptno" min="100" max="1000"></td>
+        </tr>
+        <tr>
+            <td>empsalary</td>
+            <td><input type="number" id="sal" min=10000 max=50000></td>
+        </tr>
+        <tr>
+            <td>Joindate</td>
+            <td><input type="datetime-local" id="doj" required></td>
+        </tr>
+        <tr>
+            <td>Manager id</td>
+            <td><input type="number" id="mid" min=1 max="100" required></td>
+        </tr>
+        <tr style="border:0px;">
+            <td><input type="submit" value="submit" id="sub1" onclick="storedata()"></td>
+        </tr>
+        <tr><td><a href="showempinfo.html">show info</a></td></tr>
+        
+    </table>
+        </fieldset>
+    </form>
+</body>
+</html>

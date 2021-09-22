@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function datedisplay()
+        {
+            var d =new Date();
+            var e=d.getDate()+"/"+d.getMonth()+"/"+d.getFullYear();
+            document.getElementById("p1").textContent=e.toString();
+        }
+    </script>
+</head>
+<body onload="datedisplay()">
+    <header>
+        <h1>Example for Page Semantics</h1>
+    </header>
+    <section id="testing">
+        <h1>Testing batch</h1>
+        <ol>
+            <li>Html,Css,javascript</li>
+            <li>Automation Testing</li>
+        </ol>
+        <article>
+            <figure>
+            <img src="Assets/download 1.jpg" width="100px" height="100px">
+            <figcaption>logo for testing batch</figcaption>
+            </figure>
+            <aside>This is data about first article</aside>
+        </article>
+    </section>
+    <section id="dotnet">
+        <h1>dotnet batch</h1>
+        <ol>
+            <li>Html,css,javascript</li>
+            <li>C#,.net</li>
+        </ol>
+        <article>
+            <figure>
+                <img src="Assets/download.jpg" width="100px" heigth="100px">
+                <figcaption>logo for C# batch</figcaption>
+            </figure>
+            <aside>This is data about second article</aside>
+        </article>
+    </section>
+    <footer>
+        <p id="p1">Date</p>
+    </footer>
+</body>
+</html>

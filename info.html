@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function storedata()
+        {
+            var proname=document.getElementById("name").value;
+            var proid=document.getElementById("pid").value;
+            var proprice=document.getElementById("price").value;
+
+            localStorage.setItem("productname",proname);
+            localStorage.setItem("Productid",proid);
+            localStorage.setItem("productprice",proprice);
+        }
+    </script>
+</head>
+<body>
+        <form>
+            <fieldset>
+                <legend>product info</legend>
+        <table style="border-radius: 5px;background-color: coral;">
+            <tr>
+            <td>product id:</td>
+            <td><input type="number" id="pid" min="5" max="20" required></td>
+            </tr>
+            <tr>
+                <td>product name</td>
+                <td><input type="text" id="name" minlength="1" maxlength="20" required></td>
+            </tr>
+            <tr>
+                <td>product price</td>
+                <td><input type="number" id="price" min="100" max="1000"></td>
+            </tr>
+            <tr>
+                <td>product minqty</td>
+                <td><input type="number" id="minqqty" min=1 max=100></td>
+            </tr>
+            <tr>
+                <td>Manufacture date</td>
+                <td><input type="date" id="manfdate" required></td>
+            </tr>
+            <tr>
+                <td>Supplier id</td>
+                <td><input type="number" id="supid" min=1 max="100" required></td>
+            </tr>
+            <tr style="border:0px;">
+                <td><input type="submit" value="submit" id="sub1" onclick="storedata()"></td>
+                <td><input type="reset" value="new product" id="rst1"></td>
+            </tr>
+            <tr><td><a href="showinfo.html">show info</a></td></tr>
+            
+        </table>
+            </fieldset>
+        </form>
+</body>
+</html>
